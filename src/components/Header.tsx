@@ -1,15 +1,15 @@
+import DarkMode from './DarkMode';
 import './pages/home/style.css'
 
-function Header(){
+function Header(props:any){
     return(
-        <header>
-            <span className='headerText'>Where in the World?</span>
-            <div className='darkMode'>
-            <button id='buttonDarkMode'>
-                <img src="moon.svg" alt="iconMoon"/>
-                <span>Dark Mode</span>
-            </button>     
-            </div>
+        <header className={props.bgColor}>
+            <span id='headerText' className={props.bgTextColor} >Where in the World?</span>
+            <DarkMode 
+                buttonValue={props.buttonValue}
+                bgTextColor={props.bgTextColor}
+            >        
+            </DarkMode>
         </header>
     )
 }

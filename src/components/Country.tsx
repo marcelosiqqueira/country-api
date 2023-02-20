@@ -1,11 +1,9 @@
 import './pages/home/style.css'
 
 function Country(props:any){
-    // console.log('PROPSSS',props.currentCountry)
     return(
         <div className='country'>
             <div id='countryImg'>
-            {/* props.country.flag */}
                 <img src={props.currentCountry.flag} alt="image-country"/>
             </div>
             <div className='countryDescription'>
@@ -24,7 +22,6 @@ function Country(props:any){
                 </span>
             </div>
         </div>
-
     )
 }
 
