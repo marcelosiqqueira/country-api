@@ -1,5 +1,4 @@
 import DarkMode from './DarkMode';
-import './pages/home/style.css'
 
 function Header(props:any){
     return(

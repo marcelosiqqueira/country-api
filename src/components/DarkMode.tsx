@@ -1,5 +1,3 @@
-import './pages/home/style.css'
-
 function DarkMode(props:any){
     return(
     <div className='darkMode'>

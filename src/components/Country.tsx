@@ -1,12 +1,10 @@
-import './pages/home/style.css'
-
 function Country(props:any){
     return(
-        <div className='country'>
-            <div id='countryImg'>
+        <div id='country' className={props.bgColor}>
+            <div id='countryImg' >
                 <img src={props.currentCountry.flag} alt="image-country"/>
             </div>
-            <div className='countryDescription'>
+            <div id='countryDescription'>
                 <div id='countryName'> <strong>{props.currentCountry.name}</strong></div>
                 <span id='population'>
                     <strong>Population: </strong>

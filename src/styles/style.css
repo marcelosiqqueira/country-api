@@ -20,24 +20,32 @@
     height: auto;
     min-height: 100vh;
     width: 100vw;
-    /* background-color: var(--LightModeBackground); */
+
+}
+
+.lightModeBackground{
+    background-color: var(--LightModeBackground);
+}
+
+.lightModeElements{
+    background-color: var(--DarkModeTextAndLightModeElements);
 }
 
 .darkModeBackground{
     background-color: var(--DarkModeBackground);
 }
 
-.darkModeText{
+.darkModeText{  
     color: var(--DarkModeTextAndLightModeElements);
-    
 }
 
 .darkModeElements{
     background-color: var(--DarkModeElements);
+    color: var(--DarkModeTextAndLightModeElements);
 }
 
 header{
-    /* background-color: var(--DarkModeTextAndLightModeElements); */
+    background-color: var(--DarkModeTextAndLightModeElements);
     width: 100vw;
     height: 80px;
     display: flex;
@@ -148,17 +156,15 @@ header{
     margin-right: 25px;
     width: 150px;
     height: 50px;
-    /* background-color: var(--DarkModeTextAndLightModeElements); */
-    /* box-shadow: 5px 5px 5px rgb(201, 201, 201); */
 }
 
 #filterSelect{
-    background-color: transparent;
+    margin-right: 10px;
+    margin-left: 10px;
     width: 100%;
     height: 100%;
-    /* padding: 1em 1em; */
-    /* margin-right: 10px; */
     border: none;
+    border-radius: 5px;
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 600;
@@ -188,11 +194,11 @@ header{
     gap: 60px;
 }
 
-.country{
+#country{
     display: flex;
     flex-direction: column;
 
-    background-color: var(--DarkModeTextAndLightModeElements);
+    /* background-color: var(--DarkModeTextAndLightModeElements); */
     /* box-shadow: 3px 3px 3px rgb(201, 201, 201); */
     border-radius: 8px;
     
@@ -217,7 +223,8 @@ header{
     height: 100%;
 }
 
-.countryDescription{
+#countryDescription{
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     gap: 5px;

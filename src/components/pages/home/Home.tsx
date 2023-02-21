@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import './style.css'
+import '../../../styles/style.css'
 import Country from '../../Country'
 import Filter from '../../Filter'
 import Search from '../../Search'
@@ -103,33 +103,32 @@ function Home() {
   }
 
   return (
-    <div id='container' className={`${button ? 'darkModeBackground' : ''}`}>
+    <div id='container' className={`${button ? 'darkModeBackground' : 'lightModeBackground'}`}>
       <Header 
         buttonValue={handleButtonChange}
         bgColor={`${button ? 'darkModeElements' : ''}`} 
         bgTextColor={`${button ? 'darkModeText' : ''}`}
-      >
-      </Header>
+      />
       <div className='miniHeader'>
-        <Search 
-          bgColor={`${button ? 'darkModeElements' : ''}`}
-          bgTextColor={`${button ? 'darkModeText' : ''}`}
-        >
-       </Search>
-        <Filter
-          currentSelect={handleSelectChange}
-          selectedValue={selectedValue}
-          bgColor={`${button ? 'darkModeElements' : ''}`}
-          bgTextColor={`${button ? 'darkModeText' : ''}`}
-        >      
-        </Filter>
-      </div>
+      <Search 
+        bgColor={`${button ? 'darkModeElements' : 'lightModeElements'}`}
+        bgTextColor={`${button ? 'darkModeText' : ''}`}
+      />
+      <Filter
+        currentSelect={handleSelectChange}
+        selectedValue={selectedValue}
+        bgColor={`${button ? 'darkModeElements' : 'lightModeElements'}`}
+        bgTextColor={`${button ? 'darkModeText' : ''}`}
+      />          
+    </div>
 
       <div className='countries'> 
         <React.Fragment>
           {region.slice(0, (page + 1) * 20).map((country) => (
             <Country 
-            currentCountry={country} />
+              currentCountry={country}
+              bgColor={`${button ? 'darkModeElements' : 'lightModeElements'}`}
+           />
           ))}
         </React.Fragment>    
       </div>

@@ -1,9 +1,7 @@
-import './pages/home/style.css'
-
 function Filter(props:any){
     return(
          <div id='divFilter' className={props.bgColor}>
-          <select id="filterSelect" onChange={props.currentSelect} value={props.selectedValue} className={props.bgTextColor}  >
+          <select id="filterSelect" onChange={props.currentSelect} value={props.selectedValue} className={props.bgColor}>
             <option value="Todas as regiões">Todas as regiões</option>
             <option value="Africa">Africa</option>
             <option value="Americas">America</option>
