@@ -9,6 +9,7 @@ function Search(props:any){
             id='inputTextSearch'
             placeholder='Search for a country...'
             className={props.bgTextColor}
+            onChange={props.handleTextChange}
           />
         </div>
     )

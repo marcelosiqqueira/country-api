@@ -1,4 +1,3 @@
-
 :root{
     --DarkModeElements: hsl(209, 23%, 22%);
     --DarkModeBackground: hsl(207, 26%, 17%);
@@ -12,15 +11,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-#container{
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    min-height: 100vh;
-    width: 100vw;
-
 }
 
 .lightModeBackground{
@@ -44,9 +34,18 @@
     color: var(--DarkModeTextAndLightModeElements);
 }
 
+
+#container{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    width: 100vw;
+}
+
 header{
     background-color: var(--DarkModeTextAndLightModeElements);
-    width: 100vw;
+    width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -187,19 +186,19 @@ header{
 
 .countries{
     margin-left: 75px;
-    margin-right: 100px;
+    /* margin-right: 100px; */
     display: flex;
-    justify-content: space-between;
+
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 100px;
 }
 
 #country{
     display: flex;
     flex-direction: column;
-
-    /* background-color: var(--DarkModeTextAndLightModeElements); */
-    /* box-shadow: 3px 3px 3px rgb(201, 201, 201); */
+    align-items: center;
+    cursor: pointer;
+    border: none;
     border-radius: 8px;
     
     width: 270px;

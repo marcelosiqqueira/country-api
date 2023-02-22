@@ -1,6 +1,6 @@
 function Country(props:any){
     return(
-        <div id='country' className={props.bgColor}>
+        <button id='country' className={props.bgColor} onClick={props.onclick}>
             <div id='countryImg' >
                 <img src={props.currentCountry.flag} alt="image-country"/>
             </div>
@@ -19,7 +19,7 @@ function Country(props:any){
                     <span id='capitalName'>{props.currentCountry.capital}</span>
                 </span>
             </div>
-        </div>
+        </button>
     )
 }
 
