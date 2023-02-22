@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
-
-import '../../../styles/style.css'
-import '../../../styles/styleModal.css'
 import Country from '../../Country'
 import Filter from '../../Filter'
 import Search from '../../Search'
 import Header from '../../Header'
-import CountryModal from '../../CountryModal'
 import React from 'react'
+import Navbar from '../../Navbar'
+
+
 
 type CountryType = {
   flag: string,
@@ -16,14 +15,6 @@ type CountryType = {
   region: string,
   capital: string
 }
-
-type BackgroundColor = {
-  lightModeText: boolean,
-  lightModeElements: boolean,
-  lightModeBackground: boolean,
-}
-
-
 
 function Home() {
   const URL = 'https://restcountries.com/v3/all?fields=name,capital,region,population,flags';
@@ -150,24 +141,13 @@ function Home() {
   }
 
   return (
-    <div id='container' className={`${button ? 'darkModeBackground' : 'lightModeBackground'}`}>
-      {/* {modalOpen ? <CountryModal country={selectedCountry} handleCloseClick={handleCloseClick} /> : null} */}
-      <Header 
-        buttonValue={handleButtonChange}
-        bgColor={`${button ? 'darkModeElements' : ''}`} 
-        bgTextColor={`${button ? 'darkModeText' : ''}`}
-      />
+    <div id='container'>
+      <Header buttonValue = {handleButtonChange} />
       <div className='miniHeader'>
-        <Search 
-          bgColor={`${button ? 'darkModeElements' : 'lightModeElements'}`}
-          bgTextColor={`${button ? 'darkModeText' : ''}`}
-          handleTextChange = {changeTextState}
-        />
+        <Search handleTextChange = {changeTextState} />
         <Filter
-          currentSelect={handleSelectChange}
-          selectedValue={selectedValue}
-          bgColor={`${button ? 'darkModeElements' : 'lightModeElements'}`}
-          bgTextColor={`${button ? 'darkModeText' : ''}`}
+          currentSelect = {handleSelectChange}
+          selectedValue = {selectedValue}
         />          
       </div>
 
@@ -175,24 +155,12 @@ function Home() {
         <React.Fragment>
           {currentCountries.slice(0, (page + 1) * 20).map((country) => (
             <Country 
+              key={country.name}
               currentCountry={country}
-              bgColor={`${button ? 'darkModeElements' : 'lightModeElements'}`}
               onclick={() => handleCountryClick(country)}
-
-           />
+            />
           ))}
         </React.Fragment>    
-      </div>
-      
-      <div>
-        {modalOpen ? 
-          <CountryModal 
-            country={selectedCountry}
-            handleCloseClick={handleCloseClick}
-            backgroundModal = {`${button ? 'darkModeBackground' : 'lightModeBackground'}`}
-            bgColor={`${button ? 'darkModeElements' : 'lightModeElements'}`}
-            bgTextColor={`${button ? 'darkModeText' : ''}`} 
-          /> : null}
       </div>
       
     </div>

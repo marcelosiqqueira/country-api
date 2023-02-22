@@ -13,29 +13,8 @@
     box-sizing: border-box;
 }
 
-.lightModeBackground{
-    background-color: var(--LightModeBackground);
-}
-
-.lightModeElements{
-    background-color: var(--DarkModeTextAndLightModeElements);
-}
-
-.darkModeBackground{
-    background-color: var(--DarkModeBackground);
-}
-
-.darkModeText{  
-    color: var(--DarkModeTextAndLightModeElements);
-}
-
-.darkModeElements{
-    background-color: var(--DarkModeElements);
-    color: var(--DarkModeTextAndLightModeElements);
-}
-
-
 #container{
+    background-color: var(--DarkModeBackground);
     display: flex;
     flex-direction: column;
     height: auto;
@@ -44,18 +23,19 @@
 }
 
 header{
-    background-color: var(--DarkModeTextAndLightModeElements);
+    background-color: var(--DarkModeElements);
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
     padding: 25px;
-    /* box-shadow: 5px 5px 5px rgb(201, 201, 201); */
+    /* box-shadow: 2px 2px 2px rgb(201, 201, 201); */
 }
 
 
 
 #headerText{
+    color: var(--DarkModeTextAndLightModeElements);
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 800;
@@ -75,6 +55,7 @@ header{
 }
 
 #buttonDarkMode span{
+    color: var(--DarkModeTextAndLightModeElements);
     text-align: left;
     font-size: 15px;
     font-weight: 300;
@@ -90,7 +71,6 @@ header{
     justify-content: space-between;
     padding: 50px;
     margin-left: 25px;
-
 }
 
 .miniHeader img{
@@ -102,20 +82,17 @@ header{
 #divSearch{
     width: 500px;
     height: 50px;
-    /* background-color: var(--DarkModeTextAndLightModeElements); */
+    background-color: var(--DarkModeElements);
     display: flex;
     align-items: center;
     gap: 20px;
-    /* box-shadow: 5px 5px 5px rgb(201, 201, 201); */
 }
 
-
-
-/* ::placeholder {
+::placeholder {
     color: var(--DarkModeTextAndLightModeElements);
     font-size: 0.9rem;
     font-weight: 300;
-  } */
+  }
 
 #buttonSearch{
     background-color: transparent;
@@ -135,13 +112,13 @@ header{
 
 #inputTextSearch{
     background-color: transparent;
+    color: var(--DarkModeTextAndLightModeElements);
     width: 400px;
     border: none;
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 300;
     font-size: 15px; 
-    
 }
 
 #inputTextSearch:focus{
@@ -149,6 +126,7 @@ header{
 }
 
 #divFilter{
+    background-color: var(--DarkModeElements);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -158,6 +136,8 @@ header{
 }
 
 #filterSelect{
+    color: var(--DarkModeTextAndLightModeElements);
+    background-color: transparent;
     margin-right: 10px;
     margin-left: 10px;
     width: 100%;
@@ -170,12 +150,11 @@ header{
 }
 
 #filterSelect option{
-
+    background-color: var(--DarkModeElements);
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 600;
     padding: 10px 0;
-    
     padding: 8px;
     margin: 2px;
 }
@@ -185,22 +164,21 @@ header{
 }
 
 .countries{
+    background-color: var(--DarkModeBackground);
     margin-left: 75px;
-    /* margin-right: 100px; */
     display: flex;
-
     flex-wrap: wrap;
     gap: 100px;
 }
 
 #country{
+    background-color: var(--DarkModeElements);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: start ;
     cursor: pointer;
     border: none;
     border-radius: 8px;
-    
     width: 270px;
     height: 330px;
 }
@@ -211,7 +189,6 @@ header{
     align-items: center;
     width: 270px;
     height: 50%;
-    
     /* border-radius: 4px; */
 }
 
@@ -224,32 +201,27 @@ header{
 
 #countryDescription{
     background-color: transparent;
+    color: var(--DarkModeTextAndLightModeElements);
     display: flex;
     flex-direction: column;
     gap: 5px;
     padding: 25px;
 }
 
-.countryDescription span{ 
+.textTitleCountry{
     font-family: 'Nunito Sans';
     font-style: normal;
-    font-weight: 300;
-    font-size: 13px;
+    font-weight: 900;
+    font-size: 18px;
 }
 
-.countryDescription div{
+.textDescriptionCountry{
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 12px;
 }
 
 #population{
-    margin-top: 5px;
+    margin-top: 10px;
 }
-
-
-
-
-
-
