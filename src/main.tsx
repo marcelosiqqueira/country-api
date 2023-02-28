@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from './components/pages/home/Home'
+import Home from './routes/Home';
 import ErrorPage from './routes/ErrorPage';
-import CountryInfo from "./components/CountryInfo"
+import CountryInfo from './routes/CountryInfo';
 
 import {
   createBrowserRouter,
@@ -10,21 +10,18 @@ import {
 } from 'react-router-dom';
 
 const router = createBrowserRouter([  
-  {
-    // path: "/",
-    // element: <Home />,
-    errorElement  : <ErrorPage />,
-    children:[
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/countryinfo",
-        element: <CountryInfo />,
-      },
-    ],
-  },
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/CountryInfo/:name",
+      element: <CountryInfo />,
+    },
+    {
+      path: "*",
+      element: <ErrorPage />,
+    },   
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

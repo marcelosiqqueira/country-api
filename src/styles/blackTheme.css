@@ -7,221 +7,103 @@
     --DarkModeTextAndLightModeElements: hsl(0, 0%, 100%);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#container{
+    background-color: var(--DarkModeBackground)
 }
 
-#container{
+.container{
     background-color: var(--DarkModeBackground);
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    min-height: 100vh;
-    width: 100vw;
 }
 
 header{
     background-color: var(--DarkModeElements);
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    padding: 25px;
-    /* box-shadow: 2px 2px 2px rgb(201, 201, 201); */
+    box-shadow: 3px 3px 5px  rgb(12, 10, 32);
 }
-
-
 
 #headerText{
     color: var(--DarkModeTextAndLightModeElements);
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 20px;
-    margin-left: 50px;
-    
 }
 
 #buttonDarkMode{
-    cursor: pointer;
-    margin-right: 50px;
     background-color: transparent;
     border-color: transparent;
-    display: flex;
-    align-items: center;
-    gap: 8px;
 }
 
 #buttonDarkMode span{
     color: var(--DarkModeTextAndLightModeElements);
-    text-align: left;
-    font-size: 15px;
-    font-weight: 300;
-}
-
-#buttonDarkMode img{
-    width: 20px;
-    height: 20px;
-}
-
-.miniHeader{
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-    margin-left: 25px;
-}
-
-.miniHeader img{
-    margin-left: 30px;
-    width: 20px;
-    height: 20px;
 }
 
 #divSearch{
-    width: 500px;
-    height: 50px;
     background-color: var(--DarkModeElements);
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    box-shadow: 3px 3px 5px  rgb(12, 10, 32);
 }
 
 ::placeholder {
     color: var(--DarkModeTextAndLightModeElements);
-    font-size: 0.9rem;
-    font-weight: 300;
   }
 
 #buttonSearch{
     background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 10%;
-    border: none;
-    cursor: pointer;
 }
-
-#buttonSearch img{
-    margin-right: 20px;
-}
-
 
 #inputTextSearch{
-    background-color: transparent;
-    color: var(--DarkModeTextAndLightModeElements);
-    width: 400px;
-    border: none;
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 15px; 
-}
-
-#inputTextSearch:focus{
-    outline: none;
+    background-color: transparent;    
 }
 
 #divFilter{
     background-color: var(--DarkModeElements);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 25px;
-    width: 150px;
-    height: 50px;
+    box-shadow: 3px 3px 5px  rgb(12, 10, 32)
 }
 
 #filterSelect{
-    color: var(--DarkModeTextAndLightModeElements);
-    background-color: transparent;
-    margin-right: 10px;
-    margin-left: 10px;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 5px;
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 600;
-}
-
-#filterSelect option{
     background-color: var(--DarkModeElements);
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 600;
-    padding: 10px 0;
-    padding: 8px;
-    margin: 2px;
-}
-
-#filterSelect:focus{
-    outline: none;
+    color: var(--DarkModeTextAndLightModeElements);
 }
 
 .countries{
     background-color: var(--DarkModeBackground);
-    margin-left: 75px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 100px;
 }
+
 
 #country{
     background-color: var(--DarkModeElements);
-    display: flex;
-    flex-direction: column;
-    text-align: start ;
-    cursor: pointer;
-    border: none;
-    border-radius: 8px;
-    width: 270px;
-    height: 330px;
-}
-
-#countryImg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 270px;
-    height: 50%;
-    /* border-radius: 4px; */
+    box-shadow: 3px 3px 5px  rgb(12, 10, 32)
 }
 
 #countryImg img{
-    /* box-shadow: 3px 3px 3px 3px rgb(201, 201, 201); */
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+    box-shadow: 3px 3px 5px  rgb(12, 10, 32)
 }
 
 #countryDescription{
     background-color: transparent;
+    color: var(--DarkModeTextAndLightModeElements)
+}
+
+#backButton{
+    
+    background-color: var(--DarkModeElements);
     color: var(--DarkModeTextAndLightModeElements);
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 25px;
 }
 
-.textTitleCountry{
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 18px;
+#backButton img{
+    filter: invert(97%) sepia(8%) saturate(74%) hue-rotate(42deg) brightness(116%)
+    contrast(100%);
 }
 
-.textDescriptionCountry{
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 12px;
+.textColor{
+    color: var(--DarkModeTextAndLightModeElements);
 }
 
-#population{
-    margin-top: 10px;
+#borderCountryButton{
+    background-color: var(--DarkModeElements);
 }
+
+#borderCountryButton span{
+    background-color: var(--DarkModeElements);
+    color: var(--DarkModeTextAndLightModeElements);
+}
+
+
+
+
+

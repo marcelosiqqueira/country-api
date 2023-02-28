@@ -6,8 +6,9 @@ import Search from '../components/Search'
 import Header from '../components/Header'
 import React from 'react'
 
+
 type CountryType = {
-  flag: string,
+  flags: string[],
   name: string,
   population: Number,
   region: string,
@@ -61,21 +62,19 @@ function Home() {
     {
       setRegion(countries);
       setCurrentCountries(countries)
-      // console.log(region)
     }else{
       const filteredCountries = countries.filter((country) => {
         return country.region === selectedValue;
       });
       setRegion(filteredCountries);
       setCurrentCountries(filteredCountries);
-      // console.log(region)
     }
   }
 
   function getCountriesCurrencies(country:CountryType): string[]{  
     const currencies = []
 
-
+    
     for(const [key, value] of Object.entries(country))
     {
         if(key === 'currencies')
@@ -122,7 +121,7 @@ function Home() {
     const data = await response.json();
     data.forEach((obj:any) => {
       const country:CountryType = {
-        flag: obj.flags[0],
+        flags: obj.flags,
         name: obj.name.common,
         population: obj.population.toLocaleString('pt-BR'),
         region: obj.region,

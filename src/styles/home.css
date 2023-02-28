@@ -29,8 +29,6 @@ header{
     padding: 25px;
 }
 
-
-
 #headerText{
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -164,21 +162,13 @@ header{
     border: none;
     border-radius: 8px;
     width: 270px;
-    height: 330px;
+    height: 360px;
 }
 
 #countryImg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 270px;
-    height: 50%;
-}
-
-#countryImg img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+    height: 180px;
+    object-fit: fill;
 }
 
 #countryDescription{
@@ -213,8 +203,6 @@ header{
     margin-top: 10px;
 }
 
-
-
 @media screen and (max-width: 600px){
     #container{
         align-items: center;
@@ -225,7 +213,6 @@ header{
         width: 270px;
         padding: 0px;
         justify-content: space-around;
-        /* gap: 30px; */
     }
 
     #headerText{
@@ -263,6 +250,6 @@ header{
     ::placeholder {
         font-size: 0rem;
         font-weight: 300;
-      }
+    }
     
 }

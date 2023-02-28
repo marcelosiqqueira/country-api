@@ -22,13 +22,7 @@ type CountryType = {
 }
 
 function CountryInfo(props:any){
-    const location = useLocation();
-
-    useEffect(() => {
-        // CountryInfo(location.state)
-    },[location])
-    
-
+    const location = useLocation();   
     function getCurrentBorderName(currentBorder:string): string | undefined{
         let name = '';
         location.state.countries.forEach( (country:any) => {
@@ -73,7 +67,7 @@ function CountryInfo(props:any){
                 </Link>
                 
                 <div className="imgWithDescription">
-                    <img id="bigImg" src={location.state.currentCountry.flag} alt="image" />
+                    <img id="bigImg" src={location.state.currentCountry.flags[0]} alt="image" />
                     <div className="countryDescription">
                         <span id="countryTitle" className="textTitleCountry textColor">{location.state.currentCountry.name}</span>
                         <div id="completeDescription">
@@ -85,44 +79,44 @@ function CountryInfo(props:any){
 
                                 <div>
                                     <span className="textDescriptionCountryTwo textColor">Population: </span>  
-                                    <span className="textLowWeight">{location.state.currentCountry.population}</span>
+                                    <span className="textColor textLowWeight">{location.state.currentCountry.population}</span>
                                 </div>
 
                                 <div>
                                     <span className="textDescriptionCountryTwo textColor">Region: </span>  
-                                    <span className="textLowWeight">{location.state.currentCountry.region}</span>  
+                                    <span className="textColor textLowWeight">{location.state.currentCountry.region}</span>  
                                 </div>
 
                                 <div>
                                     <span className="textDescriptionCountryTwo textColor">Sub Region: </span>  
-                                    <span className="textLowWeight">{location.state.currentCountry.subregion}</span>  
+                                    <span className="textColor textLowWeight">{location.state.currentCountry.subregion}</span>  
                                 </div>
 
                                 <div>
                                     <span className="textDescriptionCountryTwo textColor">Capital: </span>  
-                                    <span className="textLowWeight">{location.state.currentCountry.capital}</span>  
+                                    <span className="textColor textLowWeight">{location.state.currentCountry.capital}</span>  
                                 </div>
                             </div> 
 
                             <div className="collumnTwo">
                                 <div>
                                     <span className="textDescriptionCountryTwo textColor">Top Level Domain: </span>  
-                                    <span className="textLowWeight">{location.state.currentCountry.topLevelDomain[0]}</span>  
+                                    <span className="textColor textLowWeight">{location.state.currentCountry.topLevelDomain[0]}</span>  
                                 </div>
 
                                 <div>
                                     <span className="textDescriptionCountryTwo textColor">Currencies: </span>  
-                                    <span className="textLowWeight">{location.state.currentCountry.currencies}</span>  
+                                    <span className="textColor textLowWeight">{location.state.currentCountry.currencies}</span>  
                                 </div>
 
                                 <div>
                                     <span className="textDescriptionCountryTwo textColor">Languages: </span>  
-                                    <span className="textLowWeight">{location.state.currentCountry.languages}</span>  
+                                    <span className="textColor textLowWeight">{location.state.currentCountry.languages}</span>  
                                 </div>
                             </div>
                         </div>
                         <div className="titleWithBorderCountries">
-                            <span className="titleBorderCountry">Border Countries: </span> 
+                            <span className="textColor titleBorderCountry">Border Countries: </span> 
                             <div id="borderCountries" className="textDescriptionCountryTwo textColor">
                                 
                                     <React.Fragment>                                                                 
