@@ -3,14 +3,12 @@
 }
 
 .container{
-    height: max-content;
-    width: auto;
+    height: 100vh;
 }
 
 .children{
-    margin-top: 50px;
-    margin-left: 200px;
-    margin-bottom: 50px;
+    margin: 50px 0px 50px 50px;
+    height: auto;
     gap: 10px;
 }
 
@@ -36,13 +34,12 @@
 }
 
 .imgWithDescription{
-    height: 800px;
     display: flex;
 }
 
 #bigImg{
-    margin-top: 60px;
-    width: 400px;
+    margin-top: 40px;
+    width: 500px;
     height: 300px;
 }
 
@@ -55,7 +52,7 @@
 #countryTitle{
     display: flex;
     font-size: xx-large;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 #completeDescription{
@@ -137,19 +134,23 @@ a{
         display: block;
         align-items: center;
         justify-content: center;
+        width: 100vw;
+        height: 100%;
         /* text-align: center; */
 
     }
 
     .children{
         margin-top: 20px;
+        margin-bottom: 0px;
         width: 100vw;
         margin-left: 0px;
         gap: 10px;
     }
 
     #backButton{
-        width: 85px;
+        margin: 40px 0px 40px 20px;
+        width: 100px;
         height: 40px;
     }
 
@@ -158,7 +159,6 @@ a{
         height: auto;
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
         align-items: center;
 
     }
@@ -175,7 +175,7 @@ a{
     }
 
     #countryTitle{
-        margin-top: 10px;
+        margin-top: 50px;
     }
     
     #completeDescription{
@@ -197,6 +197,11 @@ a{
     .titleWithBorderCountries{
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 100px;
+    }
+
+    .collumnTwo{
+        margin-top: 30px;
     }
     
     #borderCountryButton{
@@ -210,6 +215,12 @@ a{
         width: 100px;
         height: 40px;
     }
+}
 
-
+@media screen and (max-width: 320px){
+    #bigImg{
+        margin-top: 20px;
+        width:  285px;
+        height: 200px;
+    }
 }

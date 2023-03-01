@@ -188,6 +188,7 @@ function Home() {
 
   function handleCountryClick(country: CountryType){
     setSelectedCountry(country);
+    window.scrollTo(0,0); 
   }
 
 

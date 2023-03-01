@@ -175,8 +175,8 @@ header{
 
 #countryImg{
     width: 270px;
-    height: 180px;
-    object-fit: fill;
+    height: 180px;  
+    /* object-fit: fill; */
     border-radius: 8px;
 }
 

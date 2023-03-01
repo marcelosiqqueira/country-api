@@ -22,7 +22,7 @@ type CountryType = {
 }
 
 function CountryInfo(props:any){
-    const location = useLocation();   
+    const location = useLocation();  
     function getCurrentBorderName(currentBorder:string): string | undefined{
         let name = '';
         location.state.countries.forEach( (country:any) => {
@@ -67,7 +67,7 @@ function CountryInfo(props:any){
                 </Link>
                 
                 <div className="imgWithDescription">
-                    <img id="bigImg" src={location.state.currentCountry.flags[1]} alt="image" />
+                    <img id="bigImg" src={location.state.currentCountry.flags[0]} alt="image" />
                     <div className="countryDescription">
                         <span id="countryTitle" className="textTitleCountry textColor">{location.state.currentCountry.name}</span>
                         <div id="completeDescription">

@@ -75,11 +75,11 @@ header{
 
 #country{
     background-color: var(--ColorElement);
-    box-shadow: var(--Filter);
+    box-shadow: var(--Shadow);
 }
 
-#countryImg img{
-    box-shadow: var(--Filter);
+#countryImg{
+    box-shadow: var(--Shadow);
 }
 
 #countryDescription{
