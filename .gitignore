@@ -36,3 +36,5 @@ conceitos.MD
 #######################################################
 *.xd
 *.fig
+# Local Netlify folder
+.netlify

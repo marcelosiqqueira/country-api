@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 
 export default function ThemeSwitch(props: any){
-    const [theme, setTheme] = useState('white')
-
+    let themeLocal:string;
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        window.localStorage.setItem('themeLocal', 'black');
+    }
+    
+    const [theme, setTheme] = useState(localStorage.getItem("themeLocal") ? localStorage.getItem("themeLocal") : 'white')
     useEffect(() => {
         if (theme === 'white') {
             document.documentElement.style.setProperty('--ColorElement', 'hsl(0, 0%, 100%)')
@@ -10,7 +14,7 @@ export default function ThemeSwitch(props: any){
             document.documentElement.style.setProperty('--DarkModeTextAndLightModeElements', 'hsl(0, 0%, 100%)')
             document.documentElement.style.setProperty('--Shadow', '3px 3px 3px rgb(201, 201, 201)')
             document.documentElement.style.setProperty('--ColorText', 'hsl(200, 15%, 8%)')
-            document.documentElement.style.setProperty('--Filter', 'initial')            
+            document.documentElement.style.setProperty('--Filter', 'initial')                       
         } else {
             if (theme === 'black') {
                 document.documentElement.style.setProperty('--ColorElement', 'hsl(209, 23%, 22%)')
@@ -18,22 +22,23 @@ export default function ThemeSwitch(props: any){
                 document.documentElement.style.setProperty('--DarkModeTextAndLightModeElements', 'hsl(0, 0%, 100%)')
                 document.documentElement.style.setProperty('--Shadow', '3px 3px 3px rgb(12, 10, 32)')
                 document.documentElement.style.setProperty('--ColorText', 'hsl(0, 0%, 100%)')
-                document.documentElement.style.setProperty('--Filter', 'invert(97%) sepia(8%) saturate(74%) hue-rotate(42deg) brightness(116%) contrast(100%)')
+                document.documentElement.style.setProperty('--Filter', 'invert(97%) sepia(8%) saturate(74%) hue-rotate(42deg) brightness(116%) contrast(100%)')              
             } else {
                 console.log('ERROR THEME SWITCH')
             }
-        }
+        }         
     }, [theme])
 
     function handleThemeChange(){
-        switch(theme){
-            case 'white':
-                setTheme('black')
-            break
 
-            case 'black':
-                setTheme('white')
-            break
+        if(theme === 'white'){
+            setTheme('black');
+            window.localStorage.setItem('themeLocal', 'black');
+        }else{
+            if(theme === 'black'){
+                setTheme('white');
+                window.localStorage.setItem('themeLocal','white'); 
+            }
         }
     }
 
