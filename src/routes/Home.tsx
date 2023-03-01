@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import "../styles/home.css"
+import "../styles/colorTheme.css"
 import Country from '../components/Country'
 import Filter from '../components/Filter'
 import Search from '../components/Search'

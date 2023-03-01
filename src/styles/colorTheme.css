@@ -1,0 +1,111 @@
+#container{
+    background-color: var(--ColorBackground)
+}
+
+.container{
+    background-color: var(--ColorBackground);
+}
+
+header{
+    background-color: var(--ColorElement);
+    box-shadow: var(--Shadow);
+}
+
+#headerText{
+    color: var(--ColorText);
+}
+
+#buttonDarkMode{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#buttonDarkMode img{
+    filter: var(--Filter)
+    contrast(100%);
+}
+
+#buttonDarkMode span{
+    color: var(--ColorText);
+}
+
+#divSearch{
+    background-color: var(--ColorElement);
+    box-shadow: var(--Shadow)
+}
+
+#inputTextSearch{
+    color: var(--ColorText);
+}
+
+::placeholder {
+    color: var(--ColorText);
+  }
+
+#buttonSearch{
+    background-color: transparent;
+}
+
+#searchImg{
+    filter: var(--Filter)
+}
+
+#inputTextSearch{
+    background-color: transparent;    
+}
+
+#divFilter{
+    background-color: var(--ColorElement);
+    box-shadow: var(--Shadow)
+}
+
+#filterSelect{
+    background-color: var(--ColorElement);
+    color: var(--ColorText); 
+}
+
+#filterSelect option{
+    background-color: var(--ColorElement);
+    color: var(--ColorText);
+}
+
+.countries{
+    background-color: var(--ColorBackground);
+}
+
+#country{
+    background-color: var(--ColorElement);
+    box-shadow: var(--Filter);
+}
+
+#countryImg img{
+    box-shadow: var(--Filter);
+}
+
+#countryDescription{
+    background-color: transparent;
+    color: var(--ColorText);
+}
+
+#backButton{
+    
+    background-color: var(--ColorElement);
+    color: var(--ColorText);
+}
+
+#backButton img{
+    filter: var(--Filter);
+}
+
+.textColor{
+    color: var(--ColorText);
+}
+
+#borderCountryButton{
+    background-color: var(--ColorElement);
+}
+
+#borderCountryButton span{
+    background-color: var(--ColorElement);
+    color: var(--ColorText);
+}

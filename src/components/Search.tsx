@@ -2,7 +2,7 @@ function Search(props:any){
     return(
         <div id='divSearch' className={props.bgColor}>
           <button id='buttonSearch'>
-            <img src="search.svg" alt="search"/>
+            <img id="searchImg" src="search.svg" alt="search"/>
           </button>
           <input 
             type="text"

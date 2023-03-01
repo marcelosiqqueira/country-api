@@ -67,7 +67,7 @@ function CountryInfo(props:any){
                 </Link>
                 
                 <div className="imgWithDescription">
-                    <img id="bigImg" src={location.state.currentCountry.flags[0]} alt="image" />
+                    <img id="bigImg" src={location.state.currentCountry.flags[1]} alt="image" />
                     <div className="countryDescription">
                         <span id="countryTitle" className="textTitleCountry textColor">{location.state.currentCountry.name}</span>
                         <div id="completeDescription">
