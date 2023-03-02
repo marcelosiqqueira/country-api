@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 
+import useEffectOnce from "./useEffectOnce";
+
+
 export default function ThemeSwitch(props: any){
-    let themeLocal:string;
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        window.localStorage.setItem('themeLocal', 'black');
-    }
-    
-    const [theme, setTheme] = useState(localStorage.getItem("themeLocal") ? localStorage.getItem("themeLocal") : 'white')
+    const [theme, setTheme] = useState(localStorage.getItem("themeLocal") ? localStorage.getItem("themeLocal") : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'black' : 'white')
     useEffect(() => {
         if (theme === 'white') {
             document.documentElement.style.setProperty('--ColorElement', 'hsl(0, 0%, 100%)')

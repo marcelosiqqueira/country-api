@@ -54,10 +54,6 @@ function Home() {
     handleTextChange();
   },[currentTextSearch, region])
 
-  useEffect( () => {
-    console.log(selectedCountry)
-  },[selectedCountry])
-
   function getCountriesByRegion(): void{
     if(selectedValue == 'Todas as regiões')
     {
@@ -104,8 +100,7 @@ function Home() {
         {
             for(const [chave, valor] of Object.entries(value)){
               if(chave === 'nativeName'){
-                for(const [chave2, valor2] of Object.entries<{common:string}>(valor)){   
-                  console.log(valor2)         
+                for(const [chave2, valor2] of Object.entries<{common:string}>(valor)){          
                   nativeNames.push(valor2.common)
                 }
               }   
@@ -165,7 +160,6 @@ function Home() {
     else{
       toggleButton(false)
     }
-    console.log(`${button ? 'dark-mode' : ''}`)
   }
 
   function changeTextState(event: React.ChangeEvent<HTMLInputElement>){
